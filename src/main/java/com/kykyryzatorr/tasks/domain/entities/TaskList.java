@@ -1,10 +1,7 @@
 package com.kykyryzatorr.tasks.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
@@ -14,6 +11,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "task_lists")
 @NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class TaskList {
 

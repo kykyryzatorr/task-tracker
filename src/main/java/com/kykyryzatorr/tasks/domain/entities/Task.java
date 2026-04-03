@@ -6,10 +6,11 @@ import lombok.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+@Data
 @Entity
 @Table(name = "tasks")
-@Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Task {
 
     @Id
@@ -43,4 +44,9 @@ public class Task {
 
     @Column(name = "updated", nullable = false)
     private LocalDateTime updated;
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof Task;
+    }
+
 }
